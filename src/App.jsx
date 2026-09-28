@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from 'react';
-import Formulario from './fomrulario/Formulario';
+import Formulario from './formulario/Formulario';
 import Telaprincipal from './paginaPrincial/Principal';
 
 export default function App() {

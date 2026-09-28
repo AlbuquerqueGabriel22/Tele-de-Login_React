@@ -27,7 +27,7 @@ Aplicação web desenvolvida em React e Vite, focada em experiência do usuário
 
 ```text
 src/
-├── fomrulario/
+├── formulario/
 │   ├── botoes/
 │   │   └── Botoes.jsx
 │   ├── campos/
