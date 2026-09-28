@@ -1,0 +1,199 @@
+/* src/App.css */
+
+/* ============================================================
+   1. ESTRUTURA E FUNDO
+   ============================================================ */
+.pagina-cadastro {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: #0b0f17;
+  background-image: 
+    radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.05) 0px, transparent 70%),
+    radial-gradient(at 100% 100%, rgba(0, 0, 0, 0.8) 0px, transparent 50%);
+}
+
+/* ============================================================
+   2. CARD COM COR DINÂMICA (HSL)
+   ============================================================ */
+.Formulario {
+  /* Calcula todas as cores com base no Slider de Cor (--hue) */
+  --primary: hsl(var(--hue, 250), 85%, 60%);
+  --primary-hover: hsl(var(--hue, 250), 85%, 52%);
+  --primary-glow: hsla(var(--hue, 250), 85%, 60%, 0.25);
+
+  background: #121824;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color 0.3s ease;
+}
+
+/* ============================================================
+   3. SLIDER INTERATIVO DE COR
+   ============================================================ */
+.controle-tema {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.texto-tema {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8b949e;
+  font-weight: 600;
+}
+
+.slider-cor {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  outline: none;
+  /* Fundo em arco-íris para o slider de cores */
+  background: linear-gradient(
+    to right, 
+    hsl(0, 85%, 60%), 
+    hsl(60, 85%, 60%), 
+    hsl(120, 85%, 60%), 
+    hsl(180, 85%, 60%), 
+    hsl(240, 85%, 60%), 
+    hsl(300, 85%, 60%), 
+    hsl(360, 85%, 60%)
+  );
+  cursor: pointer;
+}
+
+.slider-cor::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.slider-cor::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* ============================================================
+   4. LOGO
+   ============================================================ */
+.Logo-Formulario {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 4px;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 20px var(--primary-glow);
+  transition: all 0.3s ease;
+}
+
+.Logo-Formulario img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   5. CAMPOS E INPUTS (Alinhamento Vertical Limpo)
+   ============================================================ */
+.labels-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+.label-formulario {
+  color: #c9d1d9;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.input-formulario {
+  width: 100%;
+  background: #0b0f17;
+  border: 1px solid #21262d;
+  color: #f0f6fc;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-formulario::placeholder {
+  color: #484f58;
+}
+
+.input-formulario:hover {
+  border-color: #30363d;
+}
+
+.input-formulario:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+/* ============================================================
+   6. BOTÃO INTERATIVO COM FEEDBACK DE CLIQUE
+   ============================================================ */
+.botoes-formulario {
+  margin-top: 6px;
+}
+
+.botoes-formulario button {
+  width: 100%;
+  padding: 13px;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px var(--primary-glow);
+  transition: all 0.2s ease;
+}
+
+.botoes-formulario button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+.botoes-formulario button:active {
+  transform: translateY(1px) scale(0.98);
+}
