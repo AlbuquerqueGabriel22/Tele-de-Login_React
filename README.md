@@ -1,16 +1,43 @@
-# React + Vite
+# Tela de Login & Cadastro Interativo | React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida em React e Vite, focada em experiência do usuário (UX/UI), componentes modulares, estilização em estilo Glassmorphism e personalização de tema de cores em tempo real via CSS dinâmico.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funcionalidades
 
-## React Compiler
+- **Personalização de Tema em Tempo Real:** Slider interativo que altera a matriz de cor (Hue) de toda a interface dinamicamente via variáveis CSS.
+- **Design Glassmorphism:** Efeito de transparência e desfoque (backdrop-filter) com gradientes no fundo.
+- **Navegação SPA (Single Page Application):** Alternância entre a tela de formulário e a tela principal gerenciada por estados (useState), sem recarregamento de página (event.preventDefault()).
+- **Componentização Modular:** Estrutura limpa e desacoplada em componentes reutilizáveis (Logo, Campos, Botoes, Formulario, PaginaPrincipal).
+- **Microinterações e Feedback Visual:** Animações de clique (:active), foco (:focus) e deslocamento ao passar o mouse (:hover).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** — Biblioteca para construção de interfaces.
+- **Vite** — Build tool para desenvolvimento front-end.
+- **JavaScript (ES6+)** — Lógica e manipulação de estado.
+- **CSS3** — Custom Properties (Variáveis CSS), Flexbox, Animações e Glassmorphism.
+
+---
+
+## Estrutura do Projeto
+
+```text
+src/
+├── fomrulario/
+│   ├── botoes/
+│   │   └── Botoes.jsx
+│   ├── campos/
+│   │   └── Campos.jsx
+│   ├── logo/
+│   │   └── Logo.jsx
+│   └── Formulario.jsx
+├── static/                  # Imagens e ativos estáticos
+├── App.css                  # Estilos globais e variáveis de tema HSL
+├── App.jsx                  # Gerenciador de navegação e controlador de telas
+├── index.css                # Reset CSS global
+├── main.jsx                 # Ponto de entrada da aplicação
+└── TelaPrincipal.jsx        # Tela pós-cadastro
